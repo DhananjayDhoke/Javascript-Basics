@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throtling</title>
+</head>
+<body>
+    <button id="but">Throtling</button>
+</body>
+</html>
+
+<script>
+  let count=0
+    function callback(){
+        console.log(`throttle ${count++}`)
+    }
+
+function throttler(callback,delay){
+  let flage=true;
+  return function(){
+     
+   
+     if(flage){
+         callback.apply()
+         flage=false
+         setTimeout(()=>{
+           flage=true
+         },delay)
+     }
+  }
+}
+let button=document.getElementById("but")
+button.addEventListener("click",throttler(callback,1000))
+
+</script>
