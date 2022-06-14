@@ -1,0 +1,15 @@
+
+.maindiv{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subdiv{
+  border: 1px solid black;
+   width: 25%;
+}
+img{
+    width: 100%;
+}
