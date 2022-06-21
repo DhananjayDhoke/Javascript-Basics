@@ -9,5 +9,4 @@ const followerSchema = new mongoose.Schema({
    
 })
 
-
 const follower = mongoose.model("follower",userSchema)
